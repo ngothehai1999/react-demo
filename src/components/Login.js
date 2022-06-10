@@ -22,7 +22,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 

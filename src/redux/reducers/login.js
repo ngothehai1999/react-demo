@@ -7,11 +7,11 @@ const initState = {
 const loginReducers = (state = initState, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS:
-      console.log(action);
-      localStorage.setItem('accessToken', action.payload.data.access_token || "")
+      console.log("action: ",action);
+      localStorage.setItem('accessToken', action.payload || "")
       return {
         ...state,
-        token: action.payload.data.access_token,
+         token: action.payload?.data?.access_token ?? '',
       };
     case LOGIN_FAIL:
       return state
